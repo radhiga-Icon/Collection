@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Invoice & Bukti Bayar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 10px;
+      color: white;
+      text-decoration: none;
+    }
+    section {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Website Permintaan Invoice & Pembayaran</h1>
+    <nav>
+      <a href="#request-invoice">Request Invoice</a> | 
+      <a href="#bukti-bayar">Kirim Bukti Bayar</a>
+    </nav>
+  </header>
+
+  <section id="request-invoice">
+    <h2>Request Invoice</h2>
+    <form action="#" method="POST">
+      <input type="text" name="customer_name" placeholder="Nama Pelanggan" required>
+      <input type="month" name="invoice_month" required>
+      <button type="submit">Kirim Request Invoice</button>
+    </form>
+  </section>
+
+  <section id="bukti-bayar">
+    <h2>Kirim Bukti Bayar</h2>
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <input type="text" name="invoice_number" placeholder="Nomor Invoice" required>
+      <input type="date" name="payment_date" required>
+      <input type="file" name="payment_proof" required>
+      <button type="submit">Kirim Bukti Bayar</button>
+    </form>
+  </section>
+
+</body>
+</html>
